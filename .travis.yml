@@ -1,0 +1,32 @@
+---
+language: generic
+
+matrix:
+  fast_finish: true
+  include:
+    - os: linux
+      env: IMAGE=centos7
+      dist: trusty
+      services:
+        - docker
+    - os: linux
+      env: IMAGE=loki
+      dist: trusty
+      services:
+        - docker
+    - os: linux
+      env: IMAGE=xenial
+      dist: trusty
+      services:
+       - docker
+    - os: osx
+      sudo: required
+
+install: make install
+script: make clean test
+
+notifications:
+  email:
+    on_success: never
+    on_failure: never
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
