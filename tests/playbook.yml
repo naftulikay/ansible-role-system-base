@@ -10,8 +10,7 @@
   hosts: localhost
   roles:
     - role: default
-      go_version: 1.10.3
-      go_user: "{{ test_user | default('vagrant') }}"
+      macos_user: "{{ test_user | default('vagrant') }}"
 
 - name: test
   hosts: localhost
@@ -22,7 +21,4 @@
       degoss_clean: false
       goss_file: goss.yml
       goss_addtl_dirs: [goss.d]
-      goss_env_vars:
-        go_version: 1.10.3
-        go_user: "{{ test_user | default('vagrant') }}"
-        go_goroot_dir: /usr/local/go
+      goss_env_vars: {}

@@ -33,3 +33,4 @@ Licensed at your discretion under either:
  [build-status]: https://travis-ci.org/naftulikay/ansible-role-system-base
  [img-build-status]: https://travis-ci.org/naftulikay/ansible-role-system-base.svg?branch=master
  [galaxy]: https://galaxy.ansible.com/naftulikay/system-base/
+ [naftulikay.base]: https://github.com/naftulikay/ansible-role-base
